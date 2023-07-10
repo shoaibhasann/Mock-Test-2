@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input-App</title>
+    <style>
+      .input-container {
+        display: flex;
+      }
+
+      .input-container input {
+        margin-right: 10px;
+      }
+
+      .output {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-container">
+      <input type="text" id="input" />
+      <button onclick="addText()">Submit</button>
+    </div>
+    <div class="output"></div>
+
+    <script>
+        function addText(){
+        const input = document.getElementById('input');
+        const output = document.querySelector('.output');
+        const text = input.value ;
+
+        if(text){
+            const p = document.createElement('p');
+            p.textContent = text;
+            output.appendChild(p);
+            input.value = '';
+        }
+        }
+    </script>
+  </body>
+</html>

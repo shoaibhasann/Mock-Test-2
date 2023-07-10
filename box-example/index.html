@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Example</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            transition: all 0.3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <!-- javascript use -->
+    <script>
+       const box = document.querySelector('.box');
+       box.addEventListener('click', () => {
+              box.style.backgroundColor = 'yellow';
+              box.style.height = '600px';
+              box.style.width = '600px'
+       });
+    </script>
+</body>
+</html>
